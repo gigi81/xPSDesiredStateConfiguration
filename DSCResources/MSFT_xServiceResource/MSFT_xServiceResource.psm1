@@ -186,7 +186,7 @@ function Test-TargetResource
 
     if($PSBoundParameters.ContainsKey("State") -and ($State -ne $svc.Status))
     {
-        Write-Verbose -Message ($LocalizedData.TestStatusMismatch -f $svcWmi.Name,$svc.Status,$Status)
+        Write-Verbose -Message ($LocalizedData.TestStatusMismatch -f $svcWmi.Name,$svc.Status,$State)
         return $false
     }
     
